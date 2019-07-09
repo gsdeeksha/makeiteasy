@@ -1,0 +1,159 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<form action="/action_page.php">
+  <div class="imgcontainer">
+    <img src="" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit"><a href="/front_page">Login</a></button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="/signup">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+   
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+     
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <title>Document</title>
+    <style>
+    body{
+      background-image: url("https://media.gettyimages.com/videos/abstract-soft-loopable-video-id902863986?s=640x640");
+      background-size: cover;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <br><br><br><br>
+    <div  class="container"style="text-align: center;padding-top:150px;font-family:Lato; color:black;font-weight:700;border-radius:5px;" >
+    <h1 >Login</h1>
+    <br><br>
+    <form method="POST" >
+        {% csrf_token %}
+        {{ form }}
+        <br><br>
+        <br>
+        <!-- <input type="submit" /> -->
+        <input type="submit" class="btn btn-lg btn-success" >
+        <!-- <button type="button" class="btn btn-lg btn-danger">Submit</button> -->
+        <!-- <br><br><br><br><br><br><br><br><br> -->
+        <!-- <div class="container" style="background-color:white"><button type="button"class ="cancelbtn">Cancel</button>
+          <span class="psw">forgot <a href="/signup"></a>
+          </span>
+         </button>
+       </div>-->
+          <!-- <button type="button"  class="cancelbtn btn-danger "><a href="/new">Cancel</a></button> -->
+          <button type="button" class="btn btn-danger"><a href="/new">Cancel</a></button>
+          <!-- <input type="" class="btn btn-lg btn-danger" > -->
+          <br>
+          <span class="psw">Forgot <a href="/signup">password?</a></span>
+       </div>
+       <br>
+
+    
+    </form> 
+    </div>
+   
+</body>
+
+</html>
